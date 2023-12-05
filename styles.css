@@ -4,8 +4,11 @@
   margin: 0;
 }
 
+body {
+  background-color: rgb(153, 153, 153);
+}
 header {
-  height: 200px;
+  width: 100%;
   border: 5px;
   background: black;
   display: flex;
@@ -21,49 +24,65 @@ header h1 {
 }
 header img {
   margin: 10px;
+  width: 140px;
 }
-header nav a {
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+nav a {
   font-size: 20px;
-  margin: 50px;
+  margin: 20px;
   color: rgb(176, 0, 0);
 }
 
 main {
-  background-color: rgb(255, 255, 255);
   display: flex;
   flex-wrap: wrap;
 }
-main aside {
+aside {
   flex: 0 0 400px;
   order: 2;
   background-color: brown;
   margin: 20px;
-  padding: 20px;
+  padding: 30px;
   border-style: solid;
   border-color: black;
   border-width: 5px;
+  border-radius: 20px;
   justify-content: center;
 }
-main aside h2 {
-  font-size: 30px;
+aside h2 {
+  font-size: 40px;
+  padding-bottom: 20px;
 }
-section div.big {
-  width: 1416px;
+aside li {
+  font-size: 20px;
+  padding: 5px;
 }
-section div.big p {
+aside ul li.favorite-movies {
   font-size: 20px;
 }
+aside ol {
+  padding-left: 20px;
+}
+
+section div.big h3 {
+  font-size: 30px;
+}
 section div.big img {
-  width: 1400px;
+  width: 90%;
 }
 main section {
   flex: 1 0;
   padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: rgb(196, 196, 196);
+  margin: 20px;
 }
 main section h2 {
-  font-size: 40px;
+  font-size: 50px;
   padding-bottom: 20px;
 }
 
@@ -74,11 +93,13 @@ main section img {
 main section content {
   display: flex;
   flex-wrap: wrap;
-  height: 500px;
-  justify-content: left;
+  justify-content: center;
+}
+main section content div {
+  padding: 10px;
 }
 main section content img {
-  width: 700px;
+  flex: 1 0 700;
 }
 footer {
   display: flex;
@@ -91,4 +112,26 @@ footer {
 
 footer p {
   color: brown;
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+  }
+  body main section#my-work div.big img {
+    width: 95%;
+  }
+  main section {
+    flex-direction: column;
+  }
+  aside {
+    flex-grow: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
 }
