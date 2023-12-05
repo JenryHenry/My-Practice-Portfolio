@@ -80,6 +80,7 @@ main section {
   border-radius: 20px;
   background-color: rgb(196, 196, 196);
   margin: 20px;
+  justify-content: center;
 }
 main section h2 {
   font-size: 50px;
@@ -97,6 +98,10 @@ main section content {
 }
 main section content div {
   padding: 10px;
+}
+content p {
+  font-size: 22px;
+  color: rgb(163, 0, 0);
 }
 main section content img {
   flex: 1 0 700;
@@ -120,6 +125,10 @@ footer p {
     flex-direction: column;
     justify-content: center;
   }
+  section#my-work {
+    width: 100vw;
+    flex-shrink: 1;
+  }
   body main section#my-work div.big img {
     width: 95%;
   }
@@ -127,11 +136,53 @@ footer p {
     flex-direction: column;
   }
   aside {
-    flex-grow: 1;
+    flex-grow: 2;
   }
 }
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
+    flex-shrink: 1;
+  }
+  section#my-work {
+    width: 100vw;
+  }
+  content div img {
+    width: 80%;
+  }
+  nav {
+    flex-direction: column;
+  }
+  aside {
+    width: 50vw;
+    flex-shrink: 2;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  section#my-work {
+    width: 100vw;
+    flex-shrink: 1;
+  }
+  content div img {
+    width: 80%;
+  }
+  aside {
+    width: 90vw;
+    flex-shrink: 1;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  section#my-work {
+    width: 100vw;
+    flex-shrink: 1;
+  }
+  content div img {
+    width: 80%;
+  }
+  aside {
+    width: 50vw;
+    flex-shrink: 1;
   }
 }
